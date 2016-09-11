@@ -95,9 +95,11 @@ class ConsistentHashing {
     public int getMachineIdByHashCode(int hashcode) {
         int machineId = -1;
         int minDiff = Integer.MAX_VALUE;
+        // we need to find a micro shard with smallest distance clockwise with the hashcode on the circle
         for (int id: machine_shards.keySet()) {
             List<Integer> tempShards = machine_shards.get(id);
             int start = 0, end = tempShards.size() - 1;
+            // Since micro shards for each machine have already been sorted, we use binary search
             while (start + 1 < end) {
                 int mid = start + (end - start) / 2;
                 if (tempShards.get(mid) == hashcode) {
@@ -113,6 +115,8 @@ class ConsistentHashing {
             if (tempShards.get(start) == hashcode || tempShards.get(end) == hashcode) {
                 return id;
             }
+            // When calculating difference, we also need to consider hashcode is greater than any micro shard
+            // In this case, diff = microShard - hashcode + intervals
             int diff = tempShards.get(start) - hashcode;
             diff = diff < 0 ? diff + intervals : diff;
             if (diff < minDiff) {
