@@ -27,7 +27,8 @@ import java.util.*;
  * the hash value.
  *
  * With this approach, whenever there is a need to add a new machine, you can expect that on average, only a small
- * portion of data will be migrated to a new machine. This solves the all the problems I mentioned for the naive approach.
+ * portion of data from each existing machine will be migrated to the new machine. This solves the all the problems 
+ * I mentioned for the naive approach.
  *
  * Created by Haitao (James) Li on 11/09/2016
  */
