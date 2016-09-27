@@ -3,7 +3,5 @@ This project aims to help people and myself better understand some of the core s
 
 ## Database:
 Mini Cassandra Implementation
-
 Consistent Hashing Technique
-
 Basic Memcache Implementation
