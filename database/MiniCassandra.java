@@ -58,13 +58,4 @@ public class MiniCassandra {
         }
         return result;
     }
-
-    public static void main(String[] args) {
-        MiniCassandra c = new MiniCassandra();
-        c.insert("google", 1, "haha");
-        for (Column col: c.query("google", 0, 1)) {
-            System.out.println(col.key + ": " + col.value);
-        }
-
-    }
 }
