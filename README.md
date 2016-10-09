@@ -7,3 +7,6 @@ Mini Cassandra Implementation
 Consistent Hashing Technique
 
 Basic Memcache Implementation
+
+## Design Pattern:
+Thread-safe Singleton Pattern (Lazy Initialisation)
