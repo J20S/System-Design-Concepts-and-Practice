@@ -3,7 +3,7 @@ import java.util.Map;
 
 /**
  * Memcache is a useful technique to cache small chunks of data from database, API, page rendering and etc to
- * boost up entire read performance.
+ * boost up entire web application performance.
  *
  * Memcache is essentially a collection of key-value pairs. The capacity of the map depends on how big the
  * memory is. When the memory is full and new key-value pair is to be added, we need to remove some old key-value

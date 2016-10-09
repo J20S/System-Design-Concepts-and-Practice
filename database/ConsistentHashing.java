@@ -33,7 +33,7 @@ import java.util.*;
  * Created by Haitao (James) Li on 11/09/2016
  */
 
-class ConsistentHashing {
+public class ConsistentHashing {
     private static ConsistentHashing instance;
     private int intervals;
     private int microShardsPerMachine;
