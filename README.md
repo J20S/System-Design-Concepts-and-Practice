@@ -10,3 +10,5 @@ Basic Memcache Implementation
 
 ## Design Pattern:
 Thread-safe Singleton Pattern (Lazy Initialisation)
+
+Object Oriented Design (Design parking lot)
